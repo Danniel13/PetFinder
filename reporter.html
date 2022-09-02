@@ -1,12 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Reporte</title>
+    <!-- conexion con google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+    <!-- Estilos css -->
+    <link rel="stylesheet" href="estilos/reporter.css">
 </head>
+
 <body>
+    <h1>Reporte de mascota</h1>
+
+    <form action="">
+        <div>
+            <label>Nombre de tu mascota:
+                <input type="text">
+            </label>
+        </div>
+
+        <div>
+            <label>Raza:
+                <input type="text">
+            </label>
+        </div>
+
+        <div>
+            <label>Favor comunicarse al #:
+                <input type="tel">
+            </label>
+        </div>
+
+        <div>
+            <label>Favor comunicarse al correo:
+                <input type="email">
+            </label>
+        </div>
+
+        <div>
+            <label>Se perdio en:
+                <input type="text">
+            </label>
+        </div>
+
+        <div>
+            <label>Se perdio el:
+                <input type="date">
+            </label>
+        </div>
+
+        <div>
+            <label>Descripción: <br>
+                <textarea name="Descripcion_masc" id="" cols="40" rows="6"></textarea>
+            </label>
+        </div>
+
+        <div>
+            <label for="img">Ingrese imagen:</label> <br>
+            <input id="img" type="file">
+        </div>
+
+        <button class="btn">Enviar</button>
+
+    </form>
+
+
+
     
 </body>
 </html>
