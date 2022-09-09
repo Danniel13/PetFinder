@@ -1,6 +1,7 @@
 body {
     font-family: Montserrat, sans-serif;
     overflow-x: hidden;
+    ;
 }
 
 h1 {
@@ -10,10 +11,9 @@ h1 {
 
 #subtitulo{
         font-size: 30px;
-        text-align: center;
     }
 
-img {
+#img {
   font-size: 1.125rem;
   text-anchor: middle;
   -webkit-user-select: none;
@@ -38,3 +38,5 @@ img {
         
     }
 }
+
+  
