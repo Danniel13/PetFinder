@@ -1,82 +1,121 @@
-:root {
-  --color-dark: #ffffff;
-  --color-dark-x: #ffffff;
-  --color-dark-xx: #ffffff;
-  --color-light: #ffffff;
-  --color-grey: #f5f6f8;
-}
 
-body {
-  font-family: 'Roboto', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 300;
-  background-color: var(--color-grey);
-  color: var(--color-light);
-  letter-spacing: .05rem;
-}
+#imagenlogin {
+  max-width: 50%;
+  max-height: 50%;
+  opacity:0.5;
+ }
 
-.bg-light {
-  background-color: var(--color-light);
-}
-
-.bg-dark {
-  background-color: var(--color-dark);
-}
-
-.p-6 {
-  padding: 4rem 7rem;
-}
-
-.contact-box {
-  padding: 3rem;
-}
-
-.btn {
-  font-weight: 400;
-  padding: 1rem 2rem;
-  border-radius: 5rem;
-  min-width: 10rem;
-}
-
-.btn-outline-dark {
-  border: 2px solid var(--color-dark-xx);
+ 
+body{
+  background-image: url(/assest/duotone.jpg);
+background-repeat: no-repeat;
+background-size:cover;
 }
 
 
-.form-control {
-  background-color: var(--color-dark-xx);
-  border: 2px solid var(--color-dark-xx);
-  border-radius: .2rem;
-  padding: 1.5rem 1rem;
+/* input:focus, button:focus {
+  border: 1px solid var(--main-bg) ;
+  box-shadow: none ;
+  
+} */
+
+/* .form-check-input:checked {
+  background-color: var(--main-bg) ;
+  border-color: var(--main-bg) ;
+} */
+
+/* .card, .btn, input{
+  border-radius:0 ;
+} */
+#cardlog{
+  background-color: rgba(0,0,0,0.5)
 }
 
-.register-bg {
-  background-image: url('images/hero.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  min-height: 100vh;
+#linklog {
+  font-size: small;
+  text-align: left;
+  
 }
 
-.testiomonial {
-  bottom: 10px
+#linklog:link {
+  color: #75a2b8;
+}
+#linklog:hover{
+  background: rgb(79, 88, 92);
 }
 
-@media (max-width: 575.98px) {
-  .p-6 {
-      padding: 2rem;
-  }
 
-  .contact-box {
-      padding: 0;
-  }
 
-  .width-100 {
-      width: 100%;
-  }
+#txtrg {
+  border: none;
+  
+  opacity: 0.5;
 }
 
-@media (max-width: 1200px) { 
-  .register-bg {
-      min-height: 50vh;
-  }
+
+#buttonreg{
+  padding: .375rem .75rem;
+  border-radius: .30rem;
+  background-color: #135846;
+  color: #fff;
+  transition: background-color .15s ease-in-out;
+  border-color: #135846;
 }
+
+
+
+
+
+#buttonreg:hover{
+  background-color: #1b974b;
+}
+
+#buttonreg:active {
+  background-color: #1b974b;
+}
+
+
+.boton-color:hover{background: 1b974b;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* body{
+  background-image: radial-gradient(circle at 14.64% -11.24%, #164b4b 0, #134b4f 5%, #124b52 10%, #134a55 15%, #154a57 20%, #184959 25%, #1c495b 30%, #21485d 35%, #26475e 40%, #2c465f 45%, #31455f 50%, #36445f 55%, #3c435e 60%, #41415d 65%, #45405c 70%, #4a3f5a 75%, #4e3e57 80%, #513d55 85%, #553c52 90%, #583b4f 95%, #5a3a4c 100%);
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+
+.container{
+background-image: linear-gradient(180deg, #cce0dd 0, #cce0de 4.55%, #cbe0e0 9.09%, #cbe0e2 13.64%, #cbe0e3 18.18%, #cce0e5 22.73%, #ccdfe6 27.27%, #cedfe7 31.82%, #cfdfe8 36.36%, #d0dee9 40.91%, #d2deea 45.45%, #d4ddea 50%, #d6dcea 54.55%, #d8dcea 59.09%, #dadbe9 63.64%, #dddbe9 68.18%, #dfdae8 72.73%, #e1dae7 77.27%, #e3d9e5 81.82%, #e5d9e4 86.36%, #e6d8e2 90.91%, #e8d8e1 95.45%, #e9d8df 100%);
+
+
+
+}
+
+img {
+  max-width: 50%;
+  max-height: 50%;
+ }
+
+ .bg{
+  background-image: url(imagenes/Log1.png);
+ } */
