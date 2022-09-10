@@ -1,75 +1,166 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte</title>
-    <!-- conexion con google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
-    <!-- Estilos css -->
-    <link rel="stylesheet" href="estilos/reporter.css">
-</head>
 
-<body>
-    <h1>Reporte de mascota</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reporte</title>
+        <!-- conexion con google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap" rel="stylesheet">
+        <!-- conexion boostrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <!-- Estilos css -->
+        <link rel="stylesheet" href="estilos/reporter.css">
+        <link rel="stylesheet" href="estilos/index.css">
+    </head>
 
-    <form action="">
-        <div>
-            <label>Nombre de tu mascota:
-                <input type="text">
-            </label>
-        </div>
+    <body>
 
-        <div>
-            <label>Raza:
-                <input type="text">
-            </label>
-        </div>
+        <div class="container-fluid text-center ">
 
-        <div>
-            <label>Favor comunicarse al #:
-                <input type="tel">
-            </label>
-        </div>
+            <div class="row">
+                <!--Aside-->
+                <div class="col-12 col-sm-2 d-none d-xl-block" id="Aside">
+                    <div class="card border-0" id="img-logo">
+                        <img src="assest/photo_2022-08-28_10-07-46.png" class="card-img-top" alt="">
+                    </div>
 
-        <div>
-            <label>Favor comunicarse al correo:
-                <input type="email">
-            </label>
-        </div>
+                    <ul class="nav flex-column ">
+                        <li class="nav-item">
+                            <a class="btn  btn-aside" aria-current="page" href="#">Home</a>
+                        </li>
 
-        <div>
-            <label>Se perdio en:
-                <input type="text">
-            </label>
-        </div>
+                        <li class="nav-item">
+                            <a class="btn  btn-aside"" href=" #">Mi cuenta</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn  btn-aside"">Reportar mi Mascota</a>
+                            </li>
+                            <li class=" nav-item">
+                                <a class="btn  btn-aside"" href=" #">Sobre Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="btn  btn-aside"">PQRS</a>
+                        </li>
 
-        <div>
-            <label>Se perdio el:
-                <input type="date">
-            </label>
-        </div>
+                    </ul>
 
-        <div>
-            <label>Descripción: <br>
-                <textarea name="Descripcion_masc" id="" cols="40" rows="6"></textarea>
-            </label>
-        </div>
+                </div>
 
-        <div>
-            <label for="img">Ingrese imagen:</label> <br>
-            <input id="img" type="file">
-        </div>
+                <div class=" col-12 col-lg-12 col-xl-10 " id=" Section">
 
-        <button class="btn">Enviar</button>
+                    <div class="col-1 d-xl-none" id="Menu_flotante">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Menu
+                            </button>
+                            <ul class="dropdown-menu" style="">
+                                <li><a class="dropdown-item" href="#dropdown">Mi cuenta</a></li>
+                                <li><a class="dropdown-item" href="#">Reportar mi Mascota</a></li>
+                                <li><a class="dropdown-item" href="#">Sobre Nosotros</a></li>
+                                <li><a class="dropdown-item" href="#">PQRS</a></li>
+                                <div class="btn-group">
+                                    <button class="btn btn-light">Spanish</button>
+                                    <button class="btn btn-dark">English</button>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
 
-    </form>
+                    <div class="row">
+                        <!--Header-->
+                        <div class="col" id="header">
+                            <h1 id="nombre">PetFinder</h1>
+                        </div>
+                        <div class="col-2 col-12 col-sm-2 d-none d-xl-block">
+                            <div class="btn-group">
+                                <button class="btn btn-light">Spanish</button>
+                                <button class="btn btn-dark">English</button>
+                            </div>
+                        </div>
+                    </div>
 
 
 
-    
-</body>
+                    <h1> Reporte de mascota</h1>
+
+                    <!-- <div class="container-sm"> -->
+
+                    <form action="" class="container-md">
+
+                        <div class="row">
+                            <div class="col">
+                                <label class="form-label">Nombre de tu mascota:
+                                    <input class="form-control" type="text" size="30">
+                                </label>
+                            </div>
+
+                            <div class="col">
+                                <label class="form-label">Raza:
+                                    <input class="form-control" ctype="text" size="30">
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col">
+                                <label class="form-label">Favor comunicarse al #:
+                                    <input class="form-control" type="tel" size="30">
+                                </label>
+                            </div>
+
+                            <div class="col">
+                                <label class="form-label">Favor comunicarse al instagram:
+                                    <input class="form-control" placeholder="@" type="email" size="30">
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col">
+                                <label class="form-label" >Se perdio en:
+                                    <input placeholder="Ciudad" class="form-control" type="text" size="30">
+                                </label>
+                            </div>
+
+                            <div class="col">
+                                <label class="form-label">Se perdio el:
+                                    <input class="form-control" type="date" size="30">
+                                </label>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="">
+                            <label class="form-label">Descripción:
+                                <textarea class="form-control" name="Descripcion_masc" id="" cols="40"
+                                    rows="6"></textarea>
+                            </label>
+                        </div>
+
+                        <div>
+                            <label class="form-label" id="texto"> Ingrese imagen:
+                                <input class="form-control" type="file">
+                            </label>
+                        </div>
+
+                        <button class="btn-enviar">Enviar</button>
+
+                    </form>
+
+                </div>
+            </div>
+    </body>
+
 </html>

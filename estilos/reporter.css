@@ -11,11 +11,12 @@ div{    /*Separacion de formulario  */
 
 body{
     text-align: center;
+    
 }
 
 *{
     font-family: "Manrope", 'Times New Roman', Times, serif;
-    background-color: #f9fcfc;
+    
 }
 
 h1{
@@ -23,24 +24,31 @@ h1{
 }
 
 label{
-    color: #141115;
+    margin-bottom: 10px;
+    color: #FFFFFF;
 }
+
+/* .form-control{ 
+    width: 130% ;
+} */
 
 button{
     background-color: #ffd53c;
     color: #141115;
-    width: 70px;
-    height: 30px;
+    width: 100px;
+    height: 40px;
 }
+
+
 
 /* Brillito de boton enviar*/
 
-.btn{
+.btn-enviar{
     position: relative;
     overflow: hidden;
 }
 
-.btn::before{
+.btn-enviar::before{
     content: '';
     position: absolute;
     background: white;
@@ -51,9 +59,21 @@ button{
     bottom: 0;
 }
 
-.btn:hover::before{
+.btn-enviar:hover::before{
     left: calc(100% + 10px);
     transition: left 500ms;
 }
 
 /* fin de brillito de boton */
+
+#nombre{
+    text-align: left;
+}
+
+aside{
+    float: left; 
+    width: 300px;
+    height: 400px;
+    background: whitesmoke;
+}
+
