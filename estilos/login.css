@@ -13,20 +13,6 @@ background-size:cover;
 }
 
 
-/* input:focus, button:focus {
-  border: 1px solid var(--main-bg) ;
-  box-shadow: none ;
-  
-} */
-
-/* .form-check-input:checked {
-  background-color: var(--main-bg) ;
-  border-color: var(--main-bg) ;
-} */
-
-/* .card, .btn, input{
-  border-radius:0 ;
-} */
 #cardlog{
   background-color: rgba(0,0,0,0.5)
 }
