@@ -1,0 +1,37 @@
+[
+    {
+    "id": "ds-andresu",
+    "nombre": "Andres Urrutia",
+    "edad": 22,
+    "lugar_de_residencia": "Mosquera",
+    "descripcion": "Trabaja actualmente en un call center bilingue. Esta incursionando en el mundo del desarrollo de software a travez de cursos y talleres de manera autonoma y espera a un futuro convertirse en desarrollador Full Stack."
+},
+{
+    "id": "ds-daniel",
+    "nombre": "Daniel Gonzalez",
+    "edad": 28,
+    "lugar_de_residencia": "Mosquera",
+    "descripcion": "Actualmente apoya en el asesoramiento de tecnologias e infraestructura a varias empresas en horarios variables, además de estar proximo a ser Ingeniero de Sistemas. Con el deseo de buscar algo mas creativo e interesante se inclino por el desarrollo de software, estudiando de manera autonoma y a un futuro busca dedicarse a ello tiempo completo."
+},
+{
+    "id": "ds-andresl",
+    "nombre": "Andres Londoño",
+    "edad": 34,
+    "lugar_de_residencia": "Manizales",
+    "descripcion": "Se desempeña en el sector industrial. Es Tecnólogo en Automatización Industrial y proximamente Ingeniero de Sistemas. En busqueda de un cambio en su vida profesional esta incursionando en el desarrollo de software."
+},
+{
+    "id": "ds-camilo",
+    "nombre": "Camilo Gomez",
+    "edad": 20,
+    "lugar_de_residencia": "Cucúta",
+    "descripcion": "Es estudiante de Ingenieria de Sistemas y además de su carrera esta incursionando en el desarrollo de software por su interes en el manejo de datos."
+},
+{
+    "id": "ds-carlos",
+    "nombre": "Carlos Ovalle",
+    "edad": 25,
+    "lugar_de_residencia": "Bogotá",
+    "descripcion": "Es Administrador de Empresas y trabaja en una empresa familiar. Esta incursionando en el desarrollo de software por el auge tecnologico del presente y en su busqueda de darle un cambio a su proyecto de vida profesional."
+}
+]
