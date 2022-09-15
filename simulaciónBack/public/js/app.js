@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data =>{
 
         data.forEach(desarrollador => {
-            
             aboutusContainer.innerHTML += `
             
             <div container-fluid text-center text-white">
