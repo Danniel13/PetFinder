@@ -9,7 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 
 
 @Controller
-@Slf4j
+
 public class PetFindercontroller {
   
 
@@ -18,7 +18,19 @@ public class PetFindercontroller {
     return "SignIn";
   }
 
+  @GetMapping("/reporter")
+  public String reporter(Model model) { // Model es la forma como se va a enviar desde backend al html
+    return "reporter";
+  }
 
 
+    @GetMapping("/pqrs")
+  public String pqrs(Model model) { // Model es la forma como se va a enviar desde backend al html
+    return "pqrs";
+  }
 
+  @GetMapping("/about_us")
+  public String about_us(Model model) { // Model es la forma como se va a enviar desde backend al html
+    return "about_us";
+  }
 }
