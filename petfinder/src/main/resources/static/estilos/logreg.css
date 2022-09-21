@@ -62,14 +62,6 @@ font-size: x-large;
     display:none;
     color: white;
 }
-
-.more-info span:not(:last-of-type) {
-    border-bottom: 1px solid #ccc;
-}
-
-#name{
-    color: white;;
-}
 .btn-hide{
     display: none;
 }
@@ -82,7 +74,7 @@ justify-content: center;
 }
 #Footer{
     /*background-color: #ededd8;*/
-    /*padding-top: 1rem;*/
+    padding-top: 1rem;
     color: white;
     background-color:rgba(0, 0, 0, 0.2) ;
 }

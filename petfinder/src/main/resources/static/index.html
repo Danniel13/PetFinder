@@ -13,7 +13,9 @@
     <title>Home</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/estilos/index.css">
-    <script type="module" src="/js/index.js"></script>
+    <script type="module" src="/simulacionBack/public/js/index.js"></script>
+    <!-- <script type="module" src="/js/index.js"></script> -->
+
 
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="bootstrap" viewBox="0 0 118 94">
@@ -41,19 +43,19 @@
                     </div>
                     <ul class="nav flex-column ">
                         <li class="nav-item">
-                            <a class="btn  btn-aside " aria-current="page" href="/" >Home</a>
+                            <a class="btn  btn-aside " aria-current="page" href="/html/index.html" >Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn  btn-aside" href="signin">Mi cuenta</a>
+                            <a class="btn  btn-aside" href="/html/SignIn.html">Mi cuenta</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn  btn-aside" href="reporter">Reportar mi Mascota</a>
+                            <a class="btn  btn-aside" href="/html/reporter.html">Reportar mi Mascota</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn  btn-aside" href="about_us">Sobre Nosotros</a>
+                            <a class="btn  btn-aside" href="/html/about_us.html">Sobre Nosotros</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn  btn-aside" href="pqrs">PQRS</a>
+                            <a class="btn  btn-aside" href="/html/pqrs.html">PQRS</a>
                         </li>
                     </ul>
             </div>
@@ -63,12 +65,12 @@
                         <button class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
                             Menu
                         </button>
-                        <ul class="dropdown-menu" >
-                        <li><a class="dropdown-item" href="/" >Inicio</a></li>
-                        <li><a class="dropdown-item" href="signin" >Mi cuenta</a></li>
-                        <li><a class="dropdown-item" href="reporter">Reportar mi Mascota</a></li>
-                        <li><a class="dropdown-item" href="about_us">Sobre Nosotros</a></li>
-                        <li><a class="dropdown-item" href="pqrs">PQRS</a></li>
+                        <ul class="dropdown-menu" style="">
+                        <li><a class="dropdown-item" href="index.html" >Inicio</a></li>
+                        <li><a class="dropdown-item" href="SignIn.html" >Mi cuenta</a></li>
+                        <li><a class="dropdown-item" href="reporter.html">Reportar mi Mascota</a></li>
+                        <li><a class="dropdown-item" href="about_us.html">Sobre Nosotros</a></li>
+                        <li><a class="dropdown-item" href="pqrs.html">PQRS</a></li>
                             <div class="btn-group">
                                 <button class="btn btn-light">Spanish</button>
                                 <button class="btn btn-dark">English</button>
@@ -109,158 +111,47 @@
                     </div>
                     </div>
                     <div class="col" id="imgs-section">
-                        <div class="row ">
-                            <div class="col d-grid justify-content-center">
-                                <div class="card card-section  ">
-                                    <img src="/imagenes/example1.jpg" alt="" class="img-fluid">
-                                    <p class="more-info" name="more-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus, rerum dolor nisi laborum eius, nemo molestiae incidunt unde numquam laudantium suscipit quaerat, ea facere repudiandae. Magnam tempora ratione inventore?</p>
+                        <div class="row " id="imgscontainer">
+                            <!-- <div class="col d-grid justify-content-center">
+                                <div class="card card-section " >
+                                    <p class="h1" id="name">Daisy</p>
+                                    <img src="/simulaciónBack/public/assets/example9.jpg" alt="" class="img-fluid">
+                                    
+                                    <p class="more-info" id="info">Se perdio en la madrugada de este sabado 21 de febrero en Takamundo entre las calles 26 de septiembre y sucre</p>
+                                    
                                     <div class="card-body">
-                                    <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" name="btn-information">
+                                    <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" id="information">
                                         Mas informacion
                                     </button>
-                                    <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" name="btn-hide">
+                                    <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" id="hide">
                                         Ocultar
                                     </button>
                                 </div>
-                                </div>
-
-                            </div>
-                            <div class="col d-grid justify-content-center">
-                                <div class="card  card-section ">
-                                    <img src="/imagenes/example2.jpg" alt="" class="img-fluid">
-                                    <p class="more-info" name="more-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus, rerum dolor nisi laborum eius, nemo molestiae incidunt unde numquam laudantium suscipit quaerat, ea facere repudiandae. Magnam tempora ratione inventore?</p>
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" name="btn-information" >
-                                            Mas informacion
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" name="btn-hide">
-                                            Ocultar
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col d-grid justify-content-center">
-                                <div class="card card-section">
-                                    <img src="/imagenes/example3.jpg" alt="" class="img-fluid">
-                                    <p class="more-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus, rerum dolor nisi laborum eius, nemo molestiae incidunt unde numquam laudantium suscipit quaerat, ea facere repudiandae. Magnam tempora ratione inventore?</p>
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Mas informacion
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Ocultar
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col d-grid justify-content-center">
-                                <div class="card card-section">
-                                    <img src="/imagenes/example4.jpg" alt="" class="img-fluid">
-                                    <p class="more-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus, rerum dolor nisi laborum eius, nemo molestiae incidunt unde numquam laudantium suscipit quaerat, ea facere repudiandae. Magnam tempora ratione inventore?</p>
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Mas informacion
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Ocultar
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col d-grid justify-content-center">
-                                <div class="card card-section">
-                                    <img src="/imagenes/example5.jpg" alt="" class="img-fluid">
-                                    <p class="more-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus, rerum dolor nisi laborum eius, nemo molestiae incidunt unde numquam laudantium suscipit quaerat, ea facere repudiandae. Magnam tempora ratione inventore?</p>
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Mas informacion
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Ocultar
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col d-grid justify-content-center" >
-                                <div class="card card-section">
-                                    <img src="/imagenes/example6.jpg" alt="" class="img-fluid">
-                                    <p class="more-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus, rerum dolor nisi laborum eius, nemo molestiae incidunt unde numquam laudantium suscipit quaerat, ea facere repudiandae. Magnam tempora ratione inventore?</p>
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Mas informacion
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Ocultar
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col d-grid justify-content-center">
-                                <div class="card card-section">
-                                    <img src="/imagenes/example7.jpg" alt="" class="img-fluid">
-                                    <p class="more-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus, rerum dolor nisi laborum eius, nemo molestiae incidunt unde numquam laudantium suscipit quaerat, ea facere repudiandae. Magnam tempora ratione inventore?</p>
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Mas informacion
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Ocultar
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col d-grid justify-content-center">
-                                <div class="card card-section">
-                                    <img src="/imagenes/example8.jpg" alt="" class="img-fluid">
-                                    <p class="more-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta minus, rerum dolor nisi laborum eius, nemo molestiae incidunt unde numquam laudantium suscipit quaerat, ea facere repudiandae. Magnam tempora ratione inventore?</p>
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover"  >
-                                            Mas informacion
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Ocultar
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col d-grid justify-content-center">
-                                <div class="card card-section">
-                                    <img src="/imagenes/example9.jpg" alt="" class="img-fluid">
-                                    <p class="more-info">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat eos perspiciatis, labore blanditiis possimus illo optio minus? Ex voluptas vero unde quis laboriosam porro odio sint praesentium quisquam. A, earum?</p>
-                                    <div class="card-body">
-                                        <button type="button" class="btn btn-secondary btn-information" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Mas informacion
-                                        </button>
-                                        <button type="button" class="btn btn-secondary btn-hide" data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom" data-bs-content="Bottom popover" >
-                                            Ocultar
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
+                                </div> -->
                         </div>
-                        <div class="col" id="Paginacion">
-                            <nav aria-label="Page navigation example">
-                                <ul class="pagination" >
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Previous">
-                                            <span aria-hidden="true">&laquo;</span>
-                                        </a>
-                                    </li>
-                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                    <li class="page-item">
-                                        <a class="page-link" href="#" aria-label="Next">
-                                        <span aria-hidden="true">&raquo;</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
+                    </div>
+                    <div class="col" id="Paginacion">
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination" >
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                    </a>
+                                </li>
+                                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
                         </div>
-                </div>
-                <div class="row" id="Footer">
                 <!--Footer-->
-                <div class="col-12">
+                <div class="row" id="Footer">
+                    <div class="col-12">
                         <form>
                             <h5 class="my-2">Subscribe to our newsletter</h5>
                             <p>Obtener actualizaciones de mi reporte o nuevos reportes.</p>
