@@ -1,0 +1,84 @@
+
+#imagenlogin {
+  max-width: 50%;
+  max-height: 50%;
+  opacity:0.5;
+ }
+
+ 
+body{
+  background-image: url(/assest/duotone.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+}
+
+
+
+#cardlog{
+  background-color: rgba(0,0,0,0.5)
+}
+
+#linklog {
+  font-size: small;
+  text-align: left;
+  
+}
+
+#linklog:link {
+  color: #75a2b8;
+}
+#linklog:hover{
+  background: rgb(79, 88, 92);
+}
+
+
+
+#txtrg {
+  border: none;
+  
+  opacity: 0.5;
+}
+
+
+#buttonreg{
+  padding: .375rem .75rem;
+  border-radius: .30rem;
+  background-color: #135846;
+  color: #fff;
+  transition: background-color .15s ease-in-out;
+  border-color: #135846;
+}
+
+
+
+
+
+#buttonreg:hover{
+  background-color: #1b974b;
+}
+
+#buttonreg:active {
+  background-color: #1b974b;
+}
+
+
+.boton-color:hover{background: 1b974b;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
