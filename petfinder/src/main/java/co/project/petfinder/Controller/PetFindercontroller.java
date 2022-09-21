@@ -11,7 +11,7 @@ public class PetFindercontroller {
   
 
   @GetMapping("/signin")
-  public String SignIn(Model model) { // Model es la forma como se va a enviar desde backend al html
+  public String signin(Model model) { // Model es la forma como se va a enviar desde backend al html
     return "signin";
   }
 
