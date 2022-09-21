@@ -33,4 +33,9 @@ public class PetFindercontroller {
   public String about_us(Model model) { // Model es la forma como se va a enviar desde backend al html
     return "about_us";
   }
+
+  @GetMapping("/register")
+  public String register(Model model) { // Model es la forma como se va a enviar desde backend al html
+    return "register";
+  }
 }
