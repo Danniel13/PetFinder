@@ -1,22 +1,25 @@
-/*const btnInformation = document.getElementsByClassName("btn-information");
-const texInfo = document.getElementsByClassName("more-info");
-const btnHide = document.getElementsByClassName("btn-hide");*/
 
-const btnInformation = document.getElementsByName("btn-information");
-const texInfo = document.getElementsByName("more-info");
-const btnHide = document.getElementsByName("btn-hide");
+export const toggleMoreInformation = () => {
+  const moreInformationBtns = Array.from(document.getElementsByClassName('btn-information'));
+  
+  moreInformationBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+          const cardSection = btn.parentElement.parentElement;
+          const moreInformationParagraph = cardSection.querySelector('p.more-info')
+          const paragraphStyles = getComputedStyle(moreInformationParagraph);
+          
+          if (paragraphStyles.display === 'none') {
+              moreInformationParagraph.style.display = 'block';
+              btn.innerText = 'Ocultar';
+          } else {
+              moreInformationParagraph.style.display = 'none';
+              btn.innerText = 'Más información';
+          };
+      });  
+  })    
+}
 
-btnInformation.addEventListener("click", function(){
-    texInfo.style.display = "block";
-    btnHide.style.display = "block";
-    btnInformation.style.display = "none";
-});
 
-btnHide.addEventListener("click", function(){
-    texInfo.style.display = "none";
-    btnHide.style.display = "none";
-    btnInformation.style.display = "block";
 
-});
 
 
