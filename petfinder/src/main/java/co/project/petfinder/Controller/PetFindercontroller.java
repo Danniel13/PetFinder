@@ -13,9 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 public class PetFindercontroller {
   
 
-  @GetMapping("/SignIn")
+  @GetMapping("/signin")
   public String SignIn(Model model) { // Model es la forma como se va a enviar desde backend al html
-    return "SignIn";
+    return "signin";
   }
 
   @GetMapping("/reporter")
