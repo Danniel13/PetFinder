@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -26,11 +27,15 @@ public class Reporter {
   private String petOwner;
   private String phonenumber;
   private String breed;
+
+ 
   private String email;
   private String instagram;
   private String dateOfLost;
   private String city;
   private String description;
   private String imageUrl;  
-  
+
+  @ManyToOne
+  private User user;
 }

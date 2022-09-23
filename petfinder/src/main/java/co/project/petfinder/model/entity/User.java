@@ -32,8 +32,10 @@ public class User {
   @Column (unique = true)
   private String email; 
 
-  @OneToMany
-  private List<Reporter> reporter;
-  
+
+  @OneToMany(mappedBy = "user")
+    private List<Reporter> reporter;
+
+
 
 }
