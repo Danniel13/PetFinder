@@ -1,10 +1,17 @@
 package co.project.petfinder.Controller.dto;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class ReporterDto {
   
     private String petName;
     private String petOwner;
-    private Integer phonenumber;
+    private String phonenumber;
     private String breed;
     private String email;
     private String instagram;
