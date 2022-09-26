@@ -17,7 +17,7 @@ public class ReporterServiceImpl implements ReporterService {
     private final reporterRepository ReporterRepository;
     
 @Override
-//Creación super clase getReportes en Reporter service.java
+//Creación super clase getReportes en ReporterService.java
     public List<ReporterDto> getReportes() {
         var reportes = ReporterRepository.findAll(Sort.by("name"));
 
