@@ -25,8 +25,7 @@ public class ReporterServiceImpl implements ReporterService {
         return reportes.stream()
             .map(rep -> new ReporterDto(rep.getId(), rep.getPetName(), rep.getPetOwner(), rep.getPhonenumber(),
                 rep.getBreed(), rep.getEmail(), rep.getInstagram(), rep.getDateOfLost(), rep.getCity(),
-                rep.getDescription(), rep.getImageUrl()))
-            .collect(Collectors.toList());
+                rep.getDescription(), rep.getImageUrl())).collect(Collectors.toList());
 
     
 
