@@ -23,6 +23,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Reporter {
 
+  @Id
+  @GeneratedValue(strategy = GenerationType.AUTO)
+  private Long id;
+  @Column(name = "reporter_id")
+
   private String petName;
   private String petOwner;
   private String phonenumber;
