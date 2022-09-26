@@ -1,31 +1,31 @@
-@startuml "Cesar's Video Shop"
+@startuml "Pet Finder"
 
-class Category {
-    - String name
-    + void setName(String name)
-    + String getName()
-}
 
-class Movie {
-    - Long code
-    - String name
+
+class Report {
+    - String petName
+    - String petOwner
+    - String phonenumber
+    - String breed
+    - String email
+    - String instagram
+    - String dateOfLost
+    - String city
     - String description
-    - Integer length
     - String imageUrl
     + set()
     + get()
 }
 
 class User {
-    - String username
+    - String email
     - String password
     - String name
-    - String email
-    - Boolean active
-    - Boolean admin
+    - String lastname
     + set()
     + get()
 }
-
-Category "1" o-- "*" Movie
+' Agregacion User-Report
+' Cardinalidad 1 a *
+User "1" o-- "*" Report
 @enduml
