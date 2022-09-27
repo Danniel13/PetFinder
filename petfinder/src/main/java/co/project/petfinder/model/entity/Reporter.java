@@ -7,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -25,15 +24,15 @@ public class Reporter {
 
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Long id;
   @Column(name = "reporter_id")
+  private Long id;
+  
 
   private String petName;
   private String petOwner;
   private String phonenumber;
   private String breed;
 
- 
   private String email;
   private String instagram;
   private String dateOfLost;
