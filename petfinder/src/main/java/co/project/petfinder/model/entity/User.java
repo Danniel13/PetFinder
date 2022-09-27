@@ -34,7 +34,7 @@ public class User {
 
 
   @OneToMany(mappedBy = "user")
-    private List<Reporter> reporter;
+  private List<Reporter> reporter;
 
 
 
