@@ -8,8 +8,8 @@ import co.project.petfinder.model.entity.User;
 
 public interface userRepository extends JpaRepository<User, String> {
     
-    Optional<User> findByUsernameAndPasswordAndActiveIsTrue(String username, String password);
+    // Optional<User> findByUsernameAndPasswordAndActiveIsTrue(String username, String password);
 
-    Optional<User> findByEmail(String email);
+    // Optional<User> findByEmail(String email);
 
 }
