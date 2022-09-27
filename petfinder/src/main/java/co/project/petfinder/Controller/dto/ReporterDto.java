@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReporterDto {
-  
+    private long id;
     private String petName;
     private String petOwner;
     private String phonenumber;

@@ -1,0 +1,31 @@
+@startuml "Pet Finder"
+
+
+
+class Report {
+    - String petName
+    - String petOwner
+    - String phonenumber
+    - String breed
+    - String email
+    - String instagram
+    - String dateOfLost
+    - String city
+    - String description
+    - String imageUrl
+    + set()
+    + get()
+}
+
+class User {
+    - String email
+    - String password
+    - String name
+    - String lastname
+    + set()
+    + get()
+}
+' Agregacion User-Report
+' Cardinalidad 1 a *
+User "1" o-- "*" Report
+@enduml

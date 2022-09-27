@@ -14,14 +14,22 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class ReporterServiceImpl implements ReporterService {
 
-    private final reporterRepository reporterRepository;
+    private final reporterRepository ReporterRepository;
     
 @Override
+//Creación super clase getReportes en ReporterService.java
     public List<ReporterDto> getReportes() {
-        var reportes = reporterRepository.findAll(Sort.by("name"));
+        var reportes = ReporterRepository.findAll(Sort.by("name"));
 
+        //Modificación de nombre de atributos Getter
         return reportes.stream()
-                .map(rep -> new ReporterDto(rep.getName(),  rep.getId(), rep.petName(), rep.petOwner(), rep.phoneNumber(), rep.breed(), rep.email(), rem.instagram(), rep.dateOfLost(), rep.city(), rep.description(), rep.imageUrl()))
-                .collect(Collectors.toList());
+            .map(rep -> new ReporterDto(rep.getId(), rep.getPetName(), rep.getPetOwner(), rep.getPhonenumber(),
+                rep.getBreed(), rep.getEmail(), rep.getInstagram(), rep.getDateOfLost(), rep.getCity(),
+                rep.getDescription(), rep.getImageUrl())).collect(Collectors.toList());
+
+    
+
+}
+//Cierre de llave faltante.
 }
 
