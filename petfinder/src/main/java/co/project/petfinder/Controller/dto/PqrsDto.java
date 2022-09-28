@@ -1,6 +1,6 @@
 package co.project.petfinder.Controller.dto;
 // Backend a front
-import javax.persistence.ManyToOne;
+// import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
