@@ -24,7 +24,7 @@ public class ReporterServiceImpl implements ReporterService {
 
         //Modificación de nombre de atributos Getter
         return reportes.stream()
-            .map(rep -> new ReporterDto(rep.getId(), rep.getPetName(), rep.getPetOwner(), rep.getPhonenumber(),rep.getBreed(), rep.getEmail(), rep.getInstagram(), rep.getDateOfLost(), rep.getCity(),rep.getDescription(), rep.getImageUrl()))
+            .map(rep -> new ReporterDto(rep.getId(), rep.getPetName(), rep.getGener(), rep.getPetOwner(), rep.getPhonenumber(),rep.getBreed(), rep.getEmail(), rep.getInstagram(), rep.getDateOfLost(), rep.getCity(),rep.getDescription(), rep.getImageUrl()))
             .collect(Collectors.toList());
 }
 //Cierre de llave faltante.

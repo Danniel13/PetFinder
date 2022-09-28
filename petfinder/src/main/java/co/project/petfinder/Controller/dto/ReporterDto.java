@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 public class ReporterDto {
     private long id;
     private String petName;
+    private String gener;
     private String petOwner;
     private String phonenumber;
     private String breed;

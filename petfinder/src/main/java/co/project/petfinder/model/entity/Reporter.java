@@ -32,7 +32,7 @@ public class Reporter {
   private String petOwner;
   private String phonenumber;
   private String breed;
-
+  private String gener;
   private String email;
   private String instagram;
   private String dateOfLost;
