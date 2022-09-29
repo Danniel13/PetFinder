@@ -33,7 +33,7 @@ public class Register {
   private String email; 
 
 
-  @OneToMany(mappedBy = "Register")
+  @OneToMany(mappedBy = "register")
   private List<Reporter> reporters;
 
 
