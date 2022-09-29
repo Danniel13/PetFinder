@@ -34,7 +34,7 @@ public class Register {
 
 
   @OneToMany(mappedBy = "Register")
-  private List<Reporter> reporter;
+  private List<Reporter> reporters;
 
 
 
