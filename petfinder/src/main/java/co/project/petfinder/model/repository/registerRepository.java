@@ -1,5 +1,5 @@
 package co.project.petfinder.model.repository;
 
-public class registerRepository {
-    
+public class RegisterRepository {
+  
 }

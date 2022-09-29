@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 
 import co.project.petfinder.Controller.dto.ReporterDto;
-import co.project.petfinder.model.repository.reporterRepository;
+import co.project.petfinder.model.repository.ReporterRepository;
 import co.project.petfinder.service.ReporterService;
 import lombok.AllArgsConstructor;
 
@@ -14,7 +14,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class ReporterServiceImpl implements ReporterService {
 
-    private final reporterRepository ReporterRepository;
+    private final ReporterRepository ReporterRepository;
     
 @Override
 //Creación super clase getReportes en ReporterService.java
