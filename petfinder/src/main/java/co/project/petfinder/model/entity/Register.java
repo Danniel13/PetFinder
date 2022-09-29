@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class Register {
   
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
@@ -33,8 +33,8 @@ public class User {
   private String email; 
 
 
-  @OneToMany(mappedBy = "user")
-  private List<Reporter> reporter;
+  @OneToMany(mappedBy = "register")
+  private List<Reporter> reporters;
 
 
 

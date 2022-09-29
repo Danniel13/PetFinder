@@ -41,5 +41,5 @@ public class Reporter {
   private String imageUrl;  
 
   @ManyToOne
-  private User user;
+  private Register register;
 }
