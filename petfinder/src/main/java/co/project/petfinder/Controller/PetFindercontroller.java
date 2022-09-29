@@ -27,7 +27,7 @@ public class PetFindercontroller {
     return "signin";
   }
 
-  @GetMapping("/reporter")
+  @GetMapping("/reporter") 
   public String reporter(Model model) { // Model es la forma como se va a enviar desde backend al html
     return "reporter";
   }
@@ -56,7 +56,7 @@ public class PetFindercontroller {
 
 
   @PostMapping
-  public String registeruser(@ModelAttribute("Register") RegisterDto registerDto){
+  public String registeruser(@ModelAttribute("register") RegisterDto registerDto){
     registerService.save(registerDto);
     return "redirect:/register?exito";
 
