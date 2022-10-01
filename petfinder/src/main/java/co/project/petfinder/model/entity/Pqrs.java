@@ -13,7 +13,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 //Backend y Base de datos!
 @Entity
-@Table(name = "pqrs")
+@Table(name = "Pqrs")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor

@@ -15,7 +15,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 //Backend y Base de datos!
 @Entity
-@Table(name = "user")
+@Table(name = "Register")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -23,8 +23,9 @@ public class Register {
   
   @Id
   @GeneratedValue(strategy = GenerationType.AUTO)
-  private Integer id;
   @Column(name = "user_id")
+  private Integer id;
+
   private String name;
   private String lastname;
   private String password;
