@@ -65,7 +65,7 @@ public class PetFindercontroller {
 
 
   @GetMapping("/register")
-    public String goToContact(Model model) {
+    public String goToregister(Model model) {
         // model.addAttribute("page", "contact");
         return "/register";
     }
@@ -92,6 +92,9 @@ public class PetFindercontroller {
         
         model.addAttribute("mensaje2", "El usuario ya existe con este correo");
         
+
+
+
         return "/register";
         
       }

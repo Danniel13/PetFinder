@@ -91,11 +91,11 @@ justify-content: center;
 #regisok{
   
 
-  color: #126A87;
+  color: #051b23;
   background-color: rgba(33, 229, 141, 0.5);
   
   font-family: "Serif";
-  
+  font-weight: bold;
   font-size:20px;
    
 }
@@ -106,7 +106,7 @@ justify-content: center;
   background-color: rgba(255, 0, 0, 0.5);
   
   font-family: "Serif";
-  
+  font-weight: bold;
   font-size:20px;
    
 }
