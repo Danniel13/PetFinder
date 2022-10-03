@@ -1,5 +1,9 @@
 package co.project.petfinder.Controller;
 
+import javax.swing.ImageIcon;
+import javax.swing.JOptionPane;
+
+import org.springframework.boot.ImageBanner;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -58,20 +62,21 @@ public class PetFindercontroller {
   // }
 
 
-  // @GetMapping("/register")
-  //   public String goToContact(Model model) {
-  //       model.addAttribute("page", "contact");
-  //       return "/register";
-  //   }
-
-
   @GetMapping("/register")
+    public String goToContact(Model model) {
+        // model.addAttribute("page", "contact");
+        return "/register";
+    }
+
+
+  @GetMapping("/registerok")
   public String getRegister(@ModelAttribute RegisterDto registerinfo, Model model) {
       
       
       registerService.save(registerinfo);
-
-      // model.addAttribute("info", registerinfo);
+      
+      model.addAttribute("mensaje", "Registro exitoso, inicie sesión para ingresar su reporte.");
+     
       return "/register";
 
 
