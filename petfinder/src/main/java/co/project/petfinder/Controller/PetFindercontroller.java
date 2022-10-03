@@ -3,7 +3,9 @@ package co.project.petfinder.Controller;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.boot.ImageBanner;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -71,13 +73,32 @@ public class PetFindercontroller {
 
   @GetMapping("/registerok")
   public String getRegister(@ModelAttribute RegisterDto registerinfo, Model model) {
+       
       
+      // registerService.save(registerinfo);
       
-      registerService.save(registerinfo);
+      try {
+
+        registerService.save(registerinfo);
       
-      model.addAttribute("mensaje", "Registro exitoso, inicie sesión para ingresar su reporte.");
+        // ...no hay errores aquí
+      
+        model.addAttribute("mensaje", "Registro exitoso, inicie sesión para ingresar su reporte.");
+
+        return "/register";
+      
+      } catch (ConstraintViolationException | DataIntegrityViolationException ex) {
+      
+        
+        model.addAttribute("mensaje2", "El usuario ya existe con este correo");
+        
+        return "/register";
+        
+      }
+
+    
      
-      return "/register";
+    
 
 
   }

@@ -6,7 +6,7 @@ import lombok.Data;
 // Backend a front
 @Data
 public class RegisterDto {
-  private Integer id;
+  // private Integer id;
   private String name;
   private String lastname;
   private String password;
