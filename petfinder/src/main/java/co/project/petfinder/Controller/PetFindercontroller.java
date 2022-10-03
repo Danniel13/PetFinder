@@ -47,15 +47,23 @@ public class PetFindercontroller {
   // }
 
 
-  @PostMapping("/register")
-  public String postRegister(@ModelAttribute RegisterDto registerinfo, Model model) {
-      log.info(registerinfo.toString());
+  // @PostMapping("/register")
+  // public String postRegister(@ModelAttribute RegisterDto registerinfo, Model model) {
+  //     log.info(registerinfo.toString());
       
-      registerService.save(registerinfo);
+  //     registerService.save(registerinfo);
 
-      model.addAttribute("info", registerinfo);
-      return "redirect:/";
-  }
+  //     model.addAttribute("info", registerinfo);
+  //     return "redirect:/";
+  // }
+
+
+  // @GetMapping("/register")
+  //   public String goToContact(Model model) {
+  //       model.addAttribute("page", "contact");
+  //       return "/register";
+  //   }
+
 
   @GetMapping("/register")
   public String getRegister(@ModelAttribute RegisterDto registerinfo, Model model) {
@@ -63,8 +71,8 @@ public class PetFindercontroller {
       
       registerService.save(registerinfo);
 
-      model.addAttribute("info", registerinfo);
-      return "register";
+      // model.addAttribute("info", registerinfo);
+      return "/register";
 
 
   }
