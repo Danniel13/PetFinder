@@ -5,8 +5,10 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Controller;
@@ -17,10 +19,12 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import co.project.petfinder.Controller.dto.RegisterDto;
 import co.project.petfinder.model.entity.Pqrs;
 import co.project.petfinder.model.entity.Reporter;
 import co.project.petfinder.service.ReporterService;
 import co.project.petfinder.service.PqrsService;
+import co.project.petfinder.service.RegisterService;
 import lombok.AllArgsConstructor;
 
 
@@ -30,6 +34,7 @@ import lombok.AllArgsConstructor;
 @Controller
 public class PetFindercontroller {
     
+  private RegisterService registerService;
     @Autowired
     @Qualifier("reporterservice")
     private ReporterService reporterService;
@@ -115,5 +120,49 @@ public class PetFindercontroller {
         return "about_us";
     } 
     
+
+
+    @GetMapping("/register")
+    public String goToregister(Model model) {
+        // model.addAttribute("page", "contact");
+        return "/register";
+    }
+
+
+  @GetMapping("/registerok")
+  public String getRegister(@ModelAttribute RegisterDto registerinfo, Model model) {
+       
+      
+      // registerService.save(registerinfo);
+      
+      try {
+
+        registerService.save(registerinfo);
+      
+        // ...no hay errores aquí
+      
+        model.addAttribute("mensaje", "Registro exitoso, inicie sesión para ingresar su reporte.");
+
+        return "/register";
+      
+      } catch (ConstraintViolationException | DataIntegrityViolationException ex) {
+      
+        
+        model.addAttribute("mensaje2", "El usuario ya existe con este correo");
+        
+
+
+
+        return "/register";
+        
+      }
+
+    
+     
+    
+
+
+  }
+
 
 }
