@@ -123,9 +123,9 @@ public class PetFindercontroller {
 
 
     @GetMapping("/register")
-    public String goToregister(Model model) {
+    public String register(Model model) {
         // model.addAttribute("page", "contact");
-        return "/register";
+        return "register";
     }
 
 
