@@ -1,0 +1,42 @@
+body {
+  font-family: Montserrat, sans-serif;
+  overflow-x: hidden;
+  ;
+}
+
+h1 {
+  font-size: 40px;
+  ;
+}
+
+#subtitulo{
+      font-size: 30px;
+  }
+
+#img {
+font-size: 1.125rem;
+text-anchor: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+user-select: none;
+}
+
+@media (max-width: 768px) {
+img {
+  font-size: 3.5rem; 
+}
+.servicio-fila {
+  width: 100%!important;
+  text-align: center;
+}
+}
+
+@media (max-width: 576px) {
+  .icono-wrap{
+      flex-wrap: wrap;
+      justify-content: center !important;
+      
+  }
+}
+
+

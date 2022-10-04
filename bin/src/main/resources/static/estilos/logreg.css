@@ -1,0 +1,89 @@
+
+.container-fluid{
+background-image: url(/imagenes/duotone.jpg);
+background-repeat: no-repeat;
+background-size:cover;
+
+}
+#Aside{
+    /*background-color: #ededd8;*/
+    background-color:rgba(0, 0, 0, 0.2) ;
+}
+.btn-aside{
+    background-color:rgba(0, 0, 0, .0);
+    color: white;
+    width: 100%;
+    margin-top:2rem;
+}
+.btn-aside:hover{
+    color: white;
+    background-color:rgba(0, 0, 0, .0);
+}
+#img-logo{
+    background-color:rgba(0, 0, 0, .0) ;
+    width: 100%;
+    padding-top: 1rem;
+}
+/*Cambio de tamaño de letra menu izquierdo*/
+.nav-item a{
+font-size: x-large;
+}
+#Section{
+    /*background-color: #a3c8e9;*/
+}
+#header{
+    padding: 1rem;
+    margin: 1rem;
+    color: white;
+}
+/*Cambio de lugar boton de idiomas*/
+#btn-languages{
+    margin: 2rem;
+}
+#second-header{
+    padding: 1rem;
+    color: white;
+
+}
+#imgs-section{
+    padding: 1rem;
+    display: flex;
+    flex-direction:column;
+    flex-wrap: wrap;
+    justify-content: start;
+}
+.card-section{
+    width: 21rem;
+    height: auto;
+    margin-bottom: 1rem;
+    background-color:rgba(0, 0, 0, 0.2) ;
+}
+.more-info{
+    display:none;
+    color: white;
+}
+.btn-hide{
+    display: none;
+}
+.card-body{
+    background-color:rgba(0, 0, 0, 0.2) ;
+}
+#Paginacion{
+display: flex;
+justify-content: center;
+}
+#Footer{
+    /*background-color: #ededd8;*/
+    padding-top: 1rem;
+    color: white;
+    background-color:rgba(0, 0, 0, 0.2) ;
+}
+#social-media{
+    padding: 1rem;
+}
+#Menu_flotante{
+    position: fixed;
+    margin-top:10px;
+    z-index: 1;
+
+}
