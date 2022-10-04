@@ -28,7 +28,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 //@RequestMapping("/index")
 @Controller
-public class ReporterController {
+public class PetFindercontroller {
     
     @Autowired
     @Qualifier("reporterservice")
