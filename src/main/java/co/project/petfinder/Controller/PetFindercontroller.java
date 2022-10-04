@@ -116,4 +116,48 @@ public class PetFindercontroller {
     } 
     
 
+
+    @GetMapping("/register")
+    public String goToregister(Model model) {
+        // model.addAttribute("page", "contact");
+        return "/register";
+    }
+
+
+  @GetMapping("/registerok")
+  public String getRegister(@ModelAttribute RegisterDto registerinfo, Model model) {
+       
+      
+      // registerService.save(registerinfo);
+      
+      try {
+
+        registerService.save(registerinfo);
+      
+        // ...no hay errores aquí
+      
+        model.addAttribute("mensaje", "Registro exitoso, inicie sesión para ingresar su reporte.");
+
+        return "/register";
+      
+      } catch (ConstraintViolationException | DataIntegrityViolationException ex) {
+      
+        
+        model.addAttribute("mensaje2", "El usuario ya existe con este correo");
+        
+
+
+
+        return "/register";
+        
+      }
+
+    
+     
+    
+
+
+  }
+
+
 }
