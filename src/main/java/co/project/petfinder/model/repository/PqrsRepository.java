@@ -3,10 +3,9 @@ package co.project.petfinder.model.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import co.project.petfinder.model.entity.Register;
+import co.project.petfinder.model.entity.Pqrs;
 
-
-
-public interface RegisterRepository extends JpaRepository<Register, Integer> {
-
+@Repository("pqrsrepository")
+public interface PqrsRepository  extends JpaRepository <Pqrs, Long>{
+    
 }

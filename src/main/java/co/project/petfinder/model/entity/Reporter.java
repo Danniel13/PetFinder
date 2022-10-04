@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 //Backend y Base de datos!
 
 @Entity
-@Table(name = "Reporter")
+@Table(name = "reporter")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -26,6 +26,8 @@ public class Reporter {
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(name = "reporter_id")
   private Long id;
+
+
   
 
   private String petName;

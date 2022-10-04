@@ -42,7 +42,7 @@
         </div>
         <ul class="nav flex-column ">
           <li class="nav-item">
-            <a class="btn  btn-aside " aria-current="page" href="/">Home</a>
+            <a class="btn  btn-aside " aria-current="page" href="/">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="btn  btn-aside" href="signin">Mi cuenta</a>
@@ -70,10 +70,10 @@
               <li><a class="dropdown-item" href="reporter">Reportar mi Mascota</a></li>
               <li><a class="dropdown-item" href="about_us">Sobre Nosotros</a></li>
               <li><a class="dropdown-item" href="pqrs">PQRS</a></li>
-              <div class="btn-group">
+              <!-- <div class="btn-group">
                 <button class="btn btn-light">Spanish</button>
                 <button class="btn btn-dark">English</button>
-              </div>
+              </div> -->
             </ul>
           </div>
         </div>
@@ -82,11 +82,11 @@
             <!--Header-->
             <div class="col" id="header">
             </div>
-            <div class="col-2 col-12 col-sm-2 d-none d-xl-block">
+            <!-- <div class="col-2 col-12 col-sm-2 d-none d-xl-block">
               <div class="btn-group">
                 <button class="btn btn-light">Spanish</button>
                 <button class="btn btn-dark">English</button>
-              </div>
+              </div> -->
             </div>
           </div>
 
@@ -105,8 +105,6 @@
                 <div id="cardlog" class="card shadow">
                   <div class="card-title text-center ">
                     <img id="imagenlogin" src="/imagenes/register2.png" alt="register">
-                    <div id="regisok" th:text="${mensaje}"></div>
-                    <div id="regisok2" th:text="${mensaje2}"></div>
 
                   </div>
 
@@ -115,53 +113,47 @@
                   </div>
 
                   <div class="card-body">
-                    <!-- INSERCIÓN DE TH PARA VALIDACIÓN DE REGISTRO -->
+                    <div th:if=${param.exito}>
+                      <div class="alert alert-info">Register Success</div>
+                    </div>
 
-                    <!-- Definición de register html y Register object backend -->
-
-                    <form method="get" action="/registerok" role="form" id="registerForm">
-                      <!-- No se puso div class= form group -->
-                      <!-- Input name -->
-
-
-                      <div class="mb-4 form-group">
+                    <form th:action="@{/register}" method="post" th:object="${Register}">
+                      <div class="mb-4">
                         <div class="input-group has-validation">
                           <span id="txtrg" class="input-group-text">&#128100</span>
-                          <input id="txtrg" type="text" class="form-control" name="name" placeholder="Name" required>
+                          <input id="txtrg" type="text" class="form-control" th:field="*{name}" placeholder="Name"
+                            required>
                           <div class="invalid-feedback">
                             Your Name is required.
                           </div>
                         </div>
                       </div>
-                      <!-- Input lastname -->
-                      <div class="mb-4 form-group">
+                      <div class="mb-4">
 
                         <div class="input-group has-validation">
                           <span id="txtrg" class="input-group-text">&#128100</span>
-                          <input id="txtrg" type="text" class="form-control" name="lastname" placeholder="Last Name"
-                            required>
+                          <input id="txtrg" type="text" class="form-control" th:field="*{lastname}"
+                            placeholder="Last Name" required>
                           <div class="invalid-feedback">
                             Your Last Name is required.
                           </div>
                         </div>
 
                       </div>
-                      <div class="mb-4 form-group">
-                        <!-- Input Email -->
-                        <!-- Cambio tipo text a email -->
+                      <div class="mb-4">
                         <div class="input-group has-validation">
                           <span id="txtrg" class="input-group-text">&#9993</span>
-                          <input id="txtrg" type="email" class="form-control" name="email" placeholder="Email" required>
+                          <input id="txtrg" type="email" class="form-control" th:field="*{email}" placeholder="Email"
+                            required>
                           <div class="invalid-feedback">
                             Your Email is required.
                           </div>
                         </div>
                         <br>
-                        <!-- Input Password -->
-                        <div class="mb-4 form-group">
+                        <div class="mb-4">
                           <div class="input-group has-validation">
                             <span id="txtrg" class="input-group-text">&#128477 </span>
-                            <input id="txtrg" type="password" class="form-control" name="password"
+                            <input id="txtrg" type="password" class="form-control" th:field="*{password}"
                               placeholder="Password" required>
                             <div class="invalid-feedback">
                               Your Password is required.
@@ -171,20 +163,16 @@
 
 
                       </div>
-                      <div class="d-grid form-group">
-                        <button id="buttonreg form-submit" type="submit" class="btn btn-primary text-light">Create
-                          Account</button>
+                      <div class="d-grid">
+                        <button id="buttonreg" type="submit" class="btn text-light btn-primary"
+                          th:href="@/signin">Create Account</button>
                       </div>
                       <br>
                       <div class="d-grid">
-                        <button type="button" class="btn text-light btn-primary " onclick="location.href='signin'">Log
-                          In</button>
+                        <button type="button" class="btn text-light btn-primary "
+                          onclick="location.href='SignIn.html'">Log In</button>
+
                       </div>
-
-
-
-
-
                     </form>
 
                     <div class="row justify-content-center mt-5">
@@ -199,16 +187,6 @@
             <br>
             <br>
             <br>
-
-
-
-
-
-
-
-
-
-
             <div class="row" id="Footer">
 
               <!--Footer-->

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" xmlns:th="http://www.thymeleaf.org/">
 
 <head>
     <meta charset="UTF-8">
@@ -89,10 +89,10 @@
                                         <li><a class="dropdown-item" href="reporter">Reportar mi Mascota</a></li>
                                         <li><a class="dropdown-item" href="about_us">Sobre Nosotros</a></li>
                                         <li><a class="dropdown-item" href="pqrs">PQRS</a></li>
-                                        <div class="btn-group">
+                                        <!-- <div class="btn-group">
                                             <button class="btn btn-light">Spanish</button>
                                             <button class="btn btn-dark">English</button>
-                                        </div>
+                                        </div> -->
                                     </ul>
                                 </div>
                             </div>
@@ -102,11 +102,13 @@
                                 <div class="col" id="header">
                                     <h1 id="nombre">PetFinder</h1>
                                 </div>
-                                <div class="col-2 col-12 col-sm-2 d-none d-xl-block">
+                                <!-- <div class="col-2 col-12 col-sm-2 d-none d-xl-block">
                                     <div class="btn-group">
                                         <button class="btn btn-light">Spanish</button>
                                         <button class="btn btn-dark">English</button>
                                     </div>
+                                </div> -->
+                                <div class="alert alert-success" role="alert" id="mensaje" th:if="${message !=null}" th:text="${message}">
                                 </div>
                             </div>
 
@@ -116,69 +118,80 @@
 
                             <!-- <div class="container-sm"> -->
 
-                            <form action="" class="container-md">
+                            <form action="#" th:action="@{/reporter}" th:object="${reporters}" class="container-md"  method="post">
 
-                                <div class="row">
-                                    <div class="col">
+                                    <div class="col ">
                                         <label class="form-label">Nombre de tu mascota:
-                                            <input class="form-control" type="text" size="30">
-                                        </label>
+                                            <input class="form-control" type="text" size="30" name="petName" th:field="*{petName}">
                                     </div>
 
-                                    <div class="col">
+                                    <div class="col ">
                                         <label class="form-label">Raza:
-                                            <input class="form-control" ctype="text" size="30">
+                                            <input class="form-control" type="text" size="30" id="breed" th:field="*{breed}" >
                                         </label>
                                     </div>
 
-                                </div>
+                                    <div class="col ">
+                                        <label class="form-label">Genero:
+                                            <input class="form-control" type="text" size="30" id="gener" th:field="*{gener}" >
+                                        </label>
+                                    </div>
 
-                                <div class="row">
+                                    <div class="col ">
+                                        <label class="form-label">Nombre del dueño:
+                                            <input class="form-control" type="text" size="30" id="petOwner" th:field="*{petOwner}" >
+                                        </label>
+                                    </div>
 
-                                    <div class="col">
+
+
+                                    <div class="col ">
                                         <label class="form-label">Favor comunicarse al #:
-                                            <input class="form-control" type="tel" size="30">
+                                            <input class="form-control" type="tel" size="30" id="phonenumber" th:field="*{phonenumber}" >
                                         </label>
                                     </div>
 
                                     <div class="col">
                                         <label class="form-label">Favor comunicarse al instagram:
-                                            <input class="form-control" placeholder="@" type="email" size="30">
+                                            <input class="form-control"  type="text" size="30" id="instagram" th:field="*{instagram}" >
                                         </label>
                                     </div>
 
-                                </div>
-
-                                <div class="row">
-
                                     <div class="col">
+                                        <label class="form-label">Correo:
+                                            <input class="form-control" type="email" id="email" th:field="*{email}" >
+                                        </label>
+                                    </div>
+
+
+
+
+                                    <div class="col ">
                                         <label class="form-label">Se perdio en:
-                                            <input placeholder="Ciudad" class="form-control" type="text" size="30">
+                                            <input placeholder="Ciudad" class="form-control" type="text" size="30" id="city" th:field="*{city}" >
                                         </label>
                                     </div>
 
                                     <div class="col">
                                         <label class="form-label">Se perdio el:
-                                            <input class="form-control" type="date" size="30">
+                                            <input class="form-control" type="text" size="30" id="dateOfLost" th:field="*{dateOfLost}">
                                         </label>
                                     </div>
 
-                                </div>
-
-                                <div class="">
+                                <div class="col ">
                                     <label class="form-label">Descripción:
-                                        <textarea class="form-control" name="Descripcion_masc" id="" cols="40"
-                                            rows="6"></textarea>
+                                        <textarea class="form-control" cols="40"
+                                            rows="6" id="description"  th:field="*{description}"></textarea>
                                     </label>
                                 </div>
 
-                                <div>
-                                    <label class="form-label" id="texto"> Ingrese imagen:
-                                        <input class="form-control" type="file">
+                                <div class="col">
+                                    <label class="form-label" id="texto"> Ingrese URL de la imagen:
+                                        <input class="form-control" type="text" id="imageUrl" th:field="*{imageUrl}" >
                                     </label>
                                 </div>
 
-                                <button class="btn-enviar">Enviar</button>
+                                <button class="btn-enviar" type="submit" value="send">Enviar</button>
 
                             </form>
 
