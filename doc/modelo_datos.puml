@@ -17,7 +17,7 @@ class Report {
     + get()
 }
 
-class User {
+class Register {
     - String email
     - String password
     - String name

@@ -9,7 +9,7 @@ import co.project.petfinder.model.entity.Register;
 public interface RegisterService   {
  
    
-  public Register save(RegisterDto registerDto);
-
+  
+  void save(RegisterDto registerDto);
 
 }
