@@ -1,32 +1,31 @@
 package co.project.petfinder.service.impl;
-import org.springframework.data.domain.Sort;
-import java.util.List;
-import java.util.stream.Collectors;
-
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import co.project.petfinder.Controller.dto.ReporterDto;
+import co.project.petfinder.model.entity.Reporter;
 import co.project.petfinder.model.repository.ReporterRepository;
 import co.project.petfinder.service.ReporterService;
 import lombok.AllArgsConstructor;
 
-// @Service
-// @AllArgsConstructor
-public class ReporterServiceImpl  {
-
-//     private final ReporterRepository ReporterRepository;
+@AllArgsConstructor
+@Service("reporterservice")
+public class ReporterServiceImpl implements ReporterService {
     
-// @Override
-// //Creación super clase getReportes en ReporterService.java
-//     public List<ReporterDto> getReportes() {
-//         // ToDo cambiarlo a Pageable para seleccionar de a 9 animales reportados
-//         var reportes = ReporterRepository.findAll(Sort.by("name"));
+    @Autowired
+    @Qualifier("reporterrepository")
+    private ReporterRepository reporterRepository;
 
-//         //Modificación de nombre de atributos Getter
-//         return reportes.stream()
-//             .map(rep -> new ReporterDto(rep.getId(), rep.getPetName(), rep.getGener(), rep.getPetOwner(), rep.getPhonenumber(),rep.getBreed(), rep.getEmail(), rep.getInstagram(), rep.getDateOfLost(), rep.getCity(),rep.getDescription(), rep.getImageUrl()))
-//             .collect(Collectors.toList());
-// }
-//Cierre de llave faltante.
+    @Override
+    public Page<Reporter> getAll(Pageable pageable) {
+        
+        return reporterRepository.findAll(pageable);
+    }
+
+    @Override
+    public Reporter addReporter(Reporter reporter) {
+        return reporterRepository.save(reporter);
+    }
 }
 

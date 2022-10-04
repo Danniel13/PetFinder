@@ -26,6 +26,8 @@ public class Reporter {
   @GeneratedValue(strategy = GenerationType.AUTO)
   @Column(name = "reporter_id")
   private Long id;
+
+
   
 
   private String petName;

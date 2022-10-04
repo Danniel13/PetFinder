@@ -28,9 +28,6 @@ background-size:cover;
 .nav-item a{
 font-size: x-large;
 }
-#Section{
-    /*background-color: #a3c8e9;*/
-}
 #header{
     padding: 1rem;
     margin: 1rem;
@@ -66,7 +63,9 @@ font-size: x-large;
 .more-info span:not(:last-of-type) {
     border-bottom: 1px solid #ccc;
 }
-
+.descripcion{
+    display: inline-block;
+}
 #name{
     color: white;;
 }
@@ -76,10 +75,10 @@ font-size: x-large;
 .card-body{
     background-color:rgba(0, 0, 0, 0.2) ;
 }
-#Paginacion{
+/* #Paginacion{
 display: flex;
 justify-content: center;
-}
+} */
 #Footer{
     /*background-color: #ededd8;*/
     /*padding-top: 1rem;*/

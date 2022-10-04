@@ -1,5 +1,5 @@
 
-export const toggleMoreInformation = () => {
+const toggleMoreInformation = () => {
   const moreInformationBtns = Array.from(document.getElementsByClassName('btn-information'));
   
   moreInformationBtns.forEach(btn => {
@@ -18,6 +18,8 @@ export const toggleMoreInformation = () => {
       });  
   })    
 }
+
+toggleMoreInformation();
 
 
 

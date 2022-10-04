@@ -1,9 +1,14 @@
 package co.project.petfinder.service;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import co.project.petfinder.model.entity.Reporter;
 
-import java.util.List;
-
-import co.project.petfinder.Controller.dto.ReporterDto;
 
 public interface ReporterService {
-  List<ReporterDto> getReportes();
+
+  Page<Reporter> getAll(Pageable pageable);
+  // public abstract List<Reporter> getReportes();
+
+  public abstract Reporter addReporter(Reporter reporter);
+
 }

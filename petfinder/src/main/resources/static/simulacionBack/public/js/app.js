@@ -12,9 +12,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     <div class=" icono-wrap">
                         <h3>${desarrollador.nombre}</h3>
                         <img src="/simulacionBack/public/assets/${desarrollador.id}.jpg" alt="Foto-de-desarrollador" width="200" height="200"> 
-                        <p class="px-3"><strong>edad: </strong>${desarrollador.edad}</p>
-                        <p class="px-3"><strong>lugar_de_residencia: </strong> ${desarrollador.lugar_de_residencia}</p>
-                        <p class="px-3"><strong>descripcion: </strong> ${desarrollador.descripcion}</p>
+                        <p class="px-3"><strong>Edad: </strong>${desarrollador.edad}</p>
+                        <p class="px-3"><strong>Lugar de Residencia: </strong> ${desarrollador.lugar_de_residencia}</p>
+                        <p class="px-3"><strong>Descripción: </strong> ${desarrollador.descripcion}</p>
                     </div>
                 </div>  
             </div>
