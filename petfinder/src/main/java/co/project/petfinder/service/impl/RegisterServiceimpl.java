@@ -17,15 +17,28 @@ public class RegisterServiceimpl implements RegisterService {
     
   //Method
   @Override
-  public Register save(RegisterDto registerDto){
+  public void save(RegisterDto register){
 
     //Validar metodo por campos Id y Reporters.
+// REPORTER !! 
+  //   Register register = new Register(null, registerDto.getName(), registerDto.getLastname(), registerDto.getEmail(),
+  //       registerDto.getPassword(), null);
+  //       return registerRepository.save(register);
 
-    Register register = new Register(null, registerDto.getName(), registerDto.getLastname(), registerDto.getEmail(),
-        registerDto.getPassword(), null);
-        return registerRepository.save(register);
-
-  }
+  // }
   
 
+  // FALTA PONER ID SE DEJA SIN ID POR SER AUTO
+  var entity = new Register();
+  entity.setName(register.getName());
+  entity.setEmail(register.getEmail());
+  entity.setLastname(register.getLastname());
+  entity.setPassword(register.getPassword());
+
+  registerRepository.save(entity);
+
+
+
+
+}
 }

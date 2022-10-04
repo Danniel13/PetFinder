@@ -6,11 +6,11 @@ import org.springframework.stereotype.Repository;
 import co.project.petfinder.model.entity.Register;
 
 
-@Repository
+
 public interface RegisterRepository extends JpaRepository<Register, Integer> {
 
 
-  
+
 
 
 }

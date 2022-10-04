@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 //Backend y Base de datos!
 
 @Entity
-@Table(name = "reporter")
+@Table(name = "Reporter")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
