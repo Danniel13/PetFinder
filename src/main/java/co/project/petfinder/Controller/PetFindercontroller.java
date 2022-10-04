@@ -143,7 +143,7 @@ public class PetFindercontroller {
       
         model.addAttribute("mensaje", "Registro exitoso, inicie sesión para ingresar su reporte.");
 
-        return "/register";
+        return "register";
       
       } catch (ConstraintViolationException | DataIntegrityViolationException ex) {
       
@@ -153,7 +153,7 @@ public class PetFindercontroller {
 
 
 
-        return "/register";
+        return "register";
         
       }
 
