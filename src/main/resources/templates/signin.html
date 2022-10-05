@@ -103,19 +103,30 @@
                     <h2 class="p-3"></h2>
                   </div>
                   <div class="card-body">
-                    <form>
-                      <div class="mb-4">
-                        <input type="text" class="form-control" size="30" maxlength="30" placeholder="@  Email"
+                    <!-- Definicion form -->
+                    <form th:action="@{/login}" method="post">
+                      <!-- Definicion campo email -->
+                      <div class="mb-4" class="form-group" id="user-group">
+                        <input type="email" class="form-control" size="30" maxlength="30" placeholder="@  Email"
                           name="email" required>
                       </div>
-                      <div class="mb-4">
-
+                      <!-- Definición campo contraseña -->
+                      <div class="mb-4" class="form-group" id="contrasena-group">
                         <input type="password" class="form-control" size="30" maxlength="30"
                           placeholder="&#9919; Password" name="password" required>
                       </div>
                       <div class="mb-4">
                         <span><a id="linklog" href="forgotpass.html">Forgot password?</a></span>
                       </div>
+                      <!-- Manejo de errores: -->
+                      <div th:if="${param.error}" class="alert alert-danger" role="alert">
+                        Invalid username and password.
+                    </div>
+                    <div th:if="${param.logout}" class="alert alert-success" role="alert">
+                        You have been logged out.
+                    </div>
+
+
                       <div class="d-grid">
                         <button type="submit" class="btn text-light btn-primary">Login</button>
                       </div>
