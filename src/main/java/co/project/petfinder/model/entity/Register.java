@@ -21,7 +21,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Register {
   
-  @Id
+ 
   @Column(name = "user_id")
   @GeneratedValue(strategy = GenerationType.AUTO)
   private Integer id;
@@ -30,6 +30,7 @@ public class Register {
   private String lastname;
   private String password;
   
+  @Id
   @Column (unique = true)
   private String email; 
 
