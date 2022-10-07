@@ -16,7 +16,7 @@ public class LoginServiceimpl implements LoginService {
 
   @Override
   public LoginResponseDto validateUser(String email, String password) {
-    var userOp = loginRepository.findByemailAndPasswordAndActiveIsTrue(email, password);
+    var userOp = loginRepository.findByemailAndPassword(email, password);
     if (userOp.isEmpty()) {
         throw new RuntimeException("Credenciales inválidas");
         

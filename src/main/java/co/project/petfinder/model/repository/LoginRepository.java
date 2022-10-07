@@ -7,7 +7,7 @@ import co.project.petfinder.model.entity.Register;
 
 public interface LoginRepository extends JpaRepository<Register, String>{
   
-  Optional<Register> findByemailAndPasswordAndActiveIsTrue(String email, String password);
+  Optional<Register> findByemailAndPassword(String email, String password);
 
 
 }
