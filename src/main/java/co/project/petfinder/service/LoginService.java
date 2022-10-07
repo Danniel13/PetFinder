@@ -1,6 +1,8 @@
 package co.project.petfinder.service;
 
+import co.project.petfinder.Controller.dto.LoginResponseDto;
+
 public interface LoginService {
-   void validateUser(String email, String password);
-   
+   LoginResponseDto validateUser(String email, String password);
+
 }
