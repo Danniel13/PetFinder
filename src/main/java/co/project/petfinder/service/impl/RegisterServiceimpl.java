@@ -30,7 +30,7 @@ public class RegisterServiceimpl implements RegisterService {
   
 
   // FALTA PONER ID SE DEJA SIN ID POR SER AUTO
-  var entity = new Register();
+  Register entity = new Register();
   entity.setName(register.getName());
   entity.setEmail(register.getEmail());
   entity.setLastname(register.getLastname());

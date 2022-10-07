@@ -114,7 +114,7 @@
                             <div class="col d-grid justify-content-center align-self-start" th:each="reporter: ${list}">
                                 <div class="card card-section ">
                                     <p class="h1" id="name" th:text="${reporter.petName}"></p>
-                                    <img alt="" class="img-fluid" th:src="${reporter.imageUrl}">
+                                    <img alt="" class="img-fluid" th:src="${reporter.imageUrl}" id="myimg">
                                     <p class="more-info" id="more-info">
                                         <span class="descripcion">Genero:</span><span class="d-block mt-2 py-2 descripcion" th:text="${reporter.gener}"></span>
                                         <span class="descripcion">Raza:</span><span class="d-block mt-2 py-2" th:text="${reporter.breed}"></span>
