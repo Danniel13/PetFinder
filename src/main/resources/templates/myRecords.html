@@ -10,9 +10,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
     
-    <title>Home</title>
+    <title>MyRecords-Petfinder</title>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="/estilos/index.css">
+    <script type="module" src="/js/index.js"></script>
     
 
 
@@ -45,9 +46,6 @@
                             <a class="btn  btn-aside " aria-current="page" href="/" >Inicio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="btn  btn-aside" href="signin">Mi cuenta</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="btn  btn-aside" href="reporter">Reportar mi Mascota</a>
                         </li>
                         <li class="nav-item">
@@ -69,7 +67,6 @@
                         </button>
                         <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="/" >Inicio</a></li>
-                        <li><a class="dropdown-item" href="signin" >Mi cuenta</a></li>
                         <li><a class="dropdown-item" href="reporter">Reportar mi Mascota</a></li>
                         <li><a class="dropdown-item" href="myRecords" >Mis Reportes</a></li>
                         <li><a class="dropdown-item" href="about_us">Sobre Nosotros</a></li>
@@ -96,7 +93,7 @@
                 <div class="row ">
                     <!--Section-->
                     <div class="col" id="second-header">
-                    <h2>Me buscan</h2>
+                    <h2>Mis Reportes</h2>
                     </div>
                     <!-- <div class="col-2 col-12 col-sm-2 d-none d-xl-block">
                         <div class="dropdown">
@@ -119,23 +116,31 @@
                                 <div class="card card-section ">
                                     <p class="h1" id="name" th:text="${reporter.petName}"></p>
                                     <img alt="" class="img-fluid" th:src="${reporter.imageUrl}">
-                                    <p class="more-info" id="more-info">
+                                    <!-- <p class="more-info" id="more-info">
                                         <span class="descripcion">Genero:</span><span class="d-block mt-2 py-2 descripcion" th:text="${reporter.gener}"></span>
-                                        <span class="descripcion">Raza:</span><span class="d-block mt-2 py-2" th:text="${reporter.breed}"></span>
+                                        <span class="descripcion">Raza:</span><span class="d-block mt-2 py-2" th:text="${reporter.breed}"></span> -->
                                         <!-- <span class="d-block mt-2 py-2" th:text="${reporter.age}"></span> -->
-                                        <span class="descripcion">Fecha de desaparición:</span><span class="d-block mt-2 py-2" th:text="${reporter.dateOfLost}"></span>
+                                        <!-- <span class="descripcion">Fecha de desaparición:</span><span class="d-block mt-2 py-2" th:text="${reporter.dateOfLost}"></span>
                                         <span class="descripcion">Dueño:</span><span class="d-block mt-2" th:text="${reporter.petOwner}"></span>
                                         <span class="descripcion">Telefono:</span><span class="d-block mt-2" th:text="${reporter.phonenumber}"></span>
                                         <span class="descripcion">Instagram:</span><span class="d-block mt-2" th:text="${reporter.instagram}"></span>
                                         <span class="descripcion">Email:</span><span class="d-block mt-2" th:text="${reporter.email}"></span>
                                         <span class="descripcion">Descripción:</span><span class="d-block mt-2" th:text="${reporter.description}"></span>
                                         <span class="descripcion">Ciudad:</span><span class="d-block mt-2" th:text="${reporter.city}"></span>
-                                    </p>
+                                    </p> -->
                                     <div class="card-body">
-                                        <button type="button" class="btn btn-secondary btn-information"
+                                        <button type="button" class="btn btn-success btn-confirmar"
                                             data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom"
-                                            data-bs-content="Bottom popover" id="btn-information">
-                                            Mas informacion
+                                            data-bs-content="Bottom popover" id="btn-confirmar">
+                                            Encontrado!!!
+                                        </button>
+                                    </div>
+
+                                    <div class="card-body">
+                                        <button type="button" class="btn btn-danger btn-renovar"
+                                            data-bs-container="body" data-bs-toggle="popover" data-bs-placement="bottom"
+                                            data-bs-content="Bottom popover" id="btn-renovar">
+                                            Aún no encontrado...
                                         </button>
                                     </div>
                                 </div>
@@ -196,6 +201,5 @@
             </div>
         </div>
     </div>
-    <script type="module" src="/js/index.js"></script>
 </body>
 </html>

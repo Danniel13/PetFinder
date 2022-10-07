@@ -34,7 +34,7 @@ import lombok.AllArgsConstructor;
 @Controller
 public class PetFindercontroller {
     
-  private RegisterService registerService;
+    private RegisterService registerService;
     @Autowired
     @Qualifier("reporterservice")
     private ReporterService reporterService;
@@ -120,6 +120,10 @@ public class PetFindercontroller {
         return "about_us";
     } 
     
+    @GetMapping("/myRecords")
+    public String myRecords(Model model){ // Model es la forma como se va a enviar desde backend al html
+        return "myRecords";
+    } 
 
 
     @GetMapping("/register")
