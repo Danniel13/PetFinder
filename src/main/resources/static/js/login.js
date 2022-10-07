@@ -35,11 +35,11 @@ const postToLogin = async (bodyObject) => {
 
         localStorage.setItem("loggedUser", JSON.stringify(email));
         
-        alert("Bienvenido "+email.email+"!", "success");
+        alert("Bienvenido "+email.name+ " " + email.lastname +"!", "success");
         
         await new Promise(r => setTimeout(r, 2000));
 
-        window.location.href = "/catalog";
+        window.location.href = "/reporter";
     } else {
         const message = await response.text();
         showError(message);
