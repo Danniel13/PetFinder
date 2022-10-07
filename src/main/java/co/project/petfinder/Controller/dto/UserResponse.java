@@ -5,10 +5,10 @@ import lombok.Data;
 
 @Builder
 @Data
-public class LoginResponseDto {
+public class UserResponse {
   private String email;
 
   private String name;
-
+  private String lastname;
 
 }

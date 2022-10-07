@@ -1,8 +1,10 @@
 package co.project.petfinder.service;
 
-import co.project.petfinder.Controller.dto.LoginResponseDto;
+import java.util.List;
+
+import co.project.petfinder.Controller.dto.UserResponse;
 
 public interface LoginService {
-   LoginResponseDto validateUser(String email, String password);
-
+   UserResponse validateUser(String email, String password);
+ 
 }

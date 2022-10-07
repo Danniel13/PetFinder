@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import co.project.petfinder.Controller.dto.LoginRequestDto;
+import co.project.petfinder.Controller.dto.LoginRequest;
 import co.project.petfinder.service.LoginService;
 import lombok.AllArgsConstructor;
 
@@ -22,7 +22,7 @@ public class LoginRestController {
   private final LoginService loginService;
   
   @PostMapping
-  public ResponseEntity<?> login(@RequestBody LoginRequestDto user) {
+  public ResponseEntity<?> login(@RequestBody LoginRequest user) {
       try {
           var response = loginService.validateUser(user.getEmail(), user.getPassword());
           return ResponseEntity.ok(response);

@@ -104,83 +104,84 @@
                   </div>
                   <div class="card-body">
                     <!-- Definicion form -->
-                    <form >
+                    <form>
                       <!-- Definicion campo email -->
                       <div class="mb-4">
-                        <input type="email" class="form-control" id="floatingEmail" size="30" maxlength="30" placeholder="@  Email"
-                          name="email" required>
+                        <input type="email" class="form-control" id="floatingEmail" size="30" maxlength="30"
+                          placeholder="@  Email" name="email" required>
                       </div>
                       <!-- Definición campo contraseña -->
                       <div class="mb-4">
                         <input type="password" class="form-control" id="floatingPassword" size="30" maxlength="30"
                           placeholder="&#9919; Password" name="password" required>
                       </div>
+                  </div>
+                  <div id="errorBox">
+                  </div>
+                  <div class="mb-4">
+                    <span><a id="linklog" href="forgotpass.html">Forgot password?</a></span>
+                  </div>
+
+
+
+                  <div class="d-grid">
+                    <button type="button" class="btn text-light btn-primary" onclick="login()">Login</button>
+                  </div>
+                  <br>
+                  <div class="d-grid">
+                    <button type="button" class="btn text-light btn-primary " onclick="location.href='register'">Create
+                      a new Account</button>
+
+                  </div>
+                  </form>
+
+                  <div class="row justify-content-center mt-5">
+                    <div class="col-lg-4 col-md-6 col-sm-6 color">
                     </div>
-                    <div id="errorBox">
-                    </div>
-                      <div class="mb-4">
-                        <span><a id="linklog" href="forgotpass.html">Forgot password?</a></span>
-                      </div>
-                      
 
-
-                      <div class="d-grid">
-                        <button type="submit" class="btn text-light btn-primary" onclick="login()">Login</button>
-                      </div>
-                      <br>
-                      <div class="d-grid">
-                        <button type="button" class="btn text-light btn-primary "
-                          onclick="location.href='register'">Create a new Account</button>
-
-                      </div>
-                    </form>
-
-                    <div class="row justify-content-center mt-5">
-                      <div class="col-lg-4 col-md-6 col-sm-6 color">
-                      </div>
-
-                    </div>
                   </div>
                 </div>
               </div>
             </div>
-            <br>
-            <br>
-            <br>
+          </div>
+          <br>
+          <br>
+          <br>
 
-            
-            <div class="row" id="Footer">
 
-              <!--Footer-->
-              <div class="col-12">
-                <form>
-                  <h5 class="my-2">Subscribe to our newsletter</h5>
-                  <p>Obtener actualizaciones de mi reporte o nuevos reportes.</p>
-                  <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                    <label for="newsletter1" class="visually-hidden">Email address</label>
-                    <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                    <button class="btn btn-primary" type="button">Suscribirse</button>
-                  </div>
-                </form>
-              </div>
-              <div class="col-12" id="social-media">
-                <div>
-                  <ul class="list-unstyled d-flex justify-content-center">
-                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                          <use xlink:href="#twitter" />
-                        </svg></a></li>
-                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                          <use xlink:href="#instagram" />
-                        </svg></a></li>
-                    <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
-                          <use xlink:href="#facebook" />
-                        </svg></a></li>
-                  </ul>
+          <div class="row" id="Footer">
+
+            <!--Footer-->
+            <div class="col-12">
+              <form>
+                <h5 class="my-2">Subscribe to our newsletter</h5>
+                <p>Obtener actualizaciones de mi reporte o nuevos reportes.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden">Email address</label>
+                  <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+                  <button class="btn btn-primary" type="button">Suscribirse</button>
                 </div>
-                <div class="col-12">
-                  <div class="d-flex flex-column flex-sm-row justify-content-between py-1 my-2 border-top">
-                    <p>&copy; 2022 Company, Inc. All rights reserved.</p>
-                  </div>
+              </form>
+            </div>
+            <div class="col-12" id="social-media">
+              <div>
+                <ul class="list-unstyled d-flex justify-content-center">
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#twitter" />
+                      </svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#instagram" />
+                      </svg></a></li>
+                  <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                        <use xlink:href="#facebook" />
+                      </svg></a></li>
+                </ul>
+              </div>
+              <div class="col-12">
+                <div class="d-flex flex-column flex-sm-row justify-content-between py-1 my-2 border-top">
+                  <p>&copy; 2022 Company, Inc. All rights reserved.</p>
+                </div>
+   <script src="/js/login.js"></script>
 </body>
 
 </html>

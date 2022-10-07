@@ -2,7 +2,7 @@ package co.project.petfinder.service.impl;
 
 import org.springframework.stereotype.Service;
 
-import co.project.petfinder.Controller.dto.LoginResponseDto;
+import co.project.petfinder.Controller.dto.UserResponse;
 import co.project.petfinder.model.repository.LoginRepository;
 
 import co.project.petfinder.service.LoginService;
@@ -15,19 +15,27 @@ public class LoginServiceimpl implements LoginService {
   private final LoginRepository loginRepository;
 
   @Override
-  public LoginResponseDto validateUser(String email, String password) {
-    var userOp = loginRepository.findByemailAndPassword(email, password);
+  public UserResponse validateUser(String email, String password) {
+    var userOp = loginRepository.findByEmailAndPassword(email, password);
     if (userOp.isEmpty()) {
         throw new RuntimeException("Credenciales inválidas");
         
     }
+
     var user = userOp.get();
-    return LoginResponseDto.builder()
+
+    return UserResponse.builder()
             .email(user.getEmail())
             .name(user.getName())
+            .lastname(user.getLastname())
             .build();
 
   }
+
+
+
+
+
   }
 
   
