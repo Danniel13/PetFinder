@@ -35,7 +35,7 @@ const postToLogin = async (bodyObject) => {
 
         localStorage.setItem("loggedUser", JSON.stringify(email));
         
-        alert("¡Bienvenido "+email.name+ " " + email.lastname +"!", "success");
+        alert("¡Welcome "+email.name+ " " + email.lastname +"!", "success");
         
         await new Promise(r => setTimeout(r, 2000));
 
