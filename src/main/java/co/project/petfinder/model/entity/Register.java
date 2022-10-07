@@ -24,13 +24,14 @@ public class Register {
  
   @Column(name = "user_id")
   @GeneratedValue(strategy = GenerationType.AUTO)
+  @Id
   private Integer id;
 
   private String name;
   private String lastname;
   private String password;
   
-  @Id
+
   @Column (unique = true)
   private String email; 
 

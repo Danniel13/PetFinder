@@ -1,8 +1,8 @@
 const login = () => {
-    const username = document.getElementById("floatingEmail").value;
+    const email = document.getElementById("floatingEmail").value;
     const password = document.getElementById("floatingPassword").value;
 
-    if (username == "") {
+    if (email == "") {
         showError("Username is required");
         return;
     }
@@ -12,7 +12,7 @@ const login = () => {
     }
 
     const body = {
-        "username": username,
+        "email": email,
         "password": password
     };
     postToLogin(body);
@@ -31,11 +31,11 @@ const postToLogin = async (bodyObject) => {
     });
 
     if (response.ok) {
-        const user = await response.json();
+        const email = await response.json();
 
-        localStorage.setItem("loggedUser", JSON.stringify(user));
+        localStorage.setItem("loggedUser", JSON.stringify(email));
         
-        alert("Bienvenido "+user.username+"!", "success");
+        alert("Bienvenido "+email.email+"!", "success");
         
         await new Promise(r => setTimeout(r, 2000));
 
