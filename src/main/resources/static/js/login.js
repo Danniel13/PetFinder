@@ -3,11 +3,11 @@ const login = () => {
     const password = document.getElementById("floatingPassword").value;
 
     if (email == "") {
-        showError("Username is required");
+        showError("¡El usuario es requerido!");
         return;
     }
     if (password == "") {
-        showError("Password is required");
+        showError("¡La contraseña es requerida!");
         return;
     }
 
@@ -35,7 +35,7 @@ const postToLogin = async (bodyObject) => {
 
         localStorage.setItem("loggedUser", JSON.stringify(email));
         
-        alert("Bienvenido "+email.name+ " " + email.lastname +"!", "success");
+        alert("¡Bienvenido "+email.name+ " " + email.lastname +"!", "success");
         
         await new Promise(r => setTimeout(r, 2000));
 
