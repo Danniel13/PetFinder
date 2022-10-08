@@ -8,8 +8,10 @@ import co.project.petfinder.model.entity.Reporter;
 import co.project.petfinder.model.repository.ReporterRepository;
 import co.project.petfinder.service.ReporterService;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @AllArgsConstructor
+@Slf4j
 @Service("reporterservice")
 public class ReporterServiceImpl implements ReporterService {
     
@@ -25,6 +27,7 @@ public class ReporterServiceImpl implements ReporterService {
 
     @Override
     public Reporter addReporter(Reporter reporter) {
+        log.info(reporter.toString());
         return reporterRepository.save(reporter);
     }
 }

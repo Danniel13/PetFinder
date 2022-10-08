@@ -90,14 +90,13 @@ public class PetFindercontroller {
         public String reporter(@ModelAttribute("reporters") Reporter reporter) { // Model es la forma como se va a enviar desde backend al html
             return "reporter";
     }
-    @PostMapping("/reporter") 
-    public String reporterAction(@ModelAttribute("reporters") Reporter reporter, RedirectAttributes flash) { // Model es la forma como se va a enviar desde backend al html
+    @PostMapping("/reporter")
+    public String reporterAction(@ModelAttribute Reporter reporter, RedirectAttributes flash) { // Model es la forma como se va a enviar desde backend al html
         reporterService.addReporter(reporter);
         flash.addFlashAttribute("message", "Tu mascota ah sido reportada!");
         return "redirect:/reporter";
     }
-
-
+    
     @GetMapping("/signin")
         public String signin(Model model) { // Model es la forma como se va a enviar desde backend al html
         return "signin";
@@ -133,8 +132,8 @@ public class PetFindercontroller {
     }
 
 
-  @GetMapping("/registerok")
-  public String getRegister(@ModelAttribute RegisterDto registerinfo, Model model) {
+    @GetMapping("/registerok")
+    public String getRegister(@ModelAttribute RegisterDto registerinfo, Model model) {
        
       
       // registerService.save(registerinfo);

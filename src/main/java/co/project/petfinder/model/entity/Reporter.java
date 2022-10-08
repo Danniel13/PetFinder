@@ -40,7 +40,7 @@ public class Reporter {
   private String dateOfLost;
   private String city;
   private String description;
-  private String imageUrl;  
+  private String imageUrl;
 
   @ManyToOne
   private Register register;
