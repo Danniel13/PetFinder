@@ -1,6 +1,6 @@
 package co.project.petfinder.Controller.dto;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Data;
 
 // Backend a front

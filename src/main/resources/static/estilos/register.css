@@ -40,7 +40,7 @@ background-size:cover;
 }
 
 
-#buttonreg{
+#form-submit{
   padding: .375rem .75rem;
   border-radius: .30rem;
   background-color: #135846;
@@ -53,13 +53,16 @@ background-size:cover;
 
 
 
-#buttonreg:hover{
+#form-submit:hover{
   background-color: #1b974b;
 }
 
-#buttonreg:active {
+#form-submit:active {
   background-color: #1b974b;
 }
+
+
+
 
 
 .boton-color:hover{background: 1b974b;}

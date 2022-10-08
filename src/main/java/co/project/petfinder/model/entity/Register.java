@@ -21,15 +21,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Register {
   
-  @Id
+ 
   @Column(name = "user_id")
   @GeneratedValue(strategy = GenerationType.AUTO)
+  @Id
   private Integer id;
 
   private String name;
   private String lastname;
   private String password;
   
+
   @Column (unique = true)
   private String email; 
 

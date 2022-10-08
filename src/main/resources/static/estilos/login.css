@@ -32,9 +32,31 @@ background-size:cover;
 
 
 
+#errorBox{
+  opacity:0.5 ;
+}
+
+
+#form-submit{
+  padding: .375rem .75rem;
+  border-radius: .30rem;
+  background-color: #135846;
+  color: #fff;
+  transition: background-color .15s ease-in-out;
+  border-color: #135846;
+}
 
 
 
+
+
+#form-submit:hover{
+  background-color: #1b974b;
+}
+
+#form-submit:active {
+  background-color: #1b974b;
+}
 
 
 
