@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="/estilos/bootstrap.min.css">
     <link rel="stylesheet" href="/estilos/index.css">
     <link rel="stylesheet" href="/estilos/reporter.css">
-    <link rel="stylesheet" href="/estilos/rep2.css">
+  
 
     <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
@@ -121,94 +121,105 @@
                                         <button class="btn btn-dark">English</button>
                                     </div>
                                 </div> -->
+
+
+                                <div class="col" id="header">
+                                    <div id="title">Reporte de mascota</div>
                                 <div class="alert alert-success" role="alert" id="mensaje" th:if="${message !=null}" th:text="${message}">
+
+
+
                                 </div>
                             </div>
 
 
 
-                        <div id="title">Reporte de mascota</div>
+                        
                        
-                            <div > </div>
+                           
 
                             <!-- <div class="container-sm"> -->
                                 <div class="container-lg" id="formulario">
-                            <form action="/reporter" id="formularioPQRS"  class="row g-3"  method="post">
+                            <form action="/reporter" id="formularioPQRS"  class="row g-3 "  method="post">
 
-                                    <div class="col-6 ">
-                                        <label class="form-label">Nombre de tu mascota:
-                                            <input class="form-control" type="text"  name="petName" >
+                                <div class="col-md-6">
+                                        
+                                            <input class="form-control" type="text"  name="petName" placeholder="Nombre de mascota">
                                     </div>
 
-                                    <div class="col-6 ">
-                                        <label class="form-label">Raza:
-                                            <input class="form-control" type="text" id="breed" name="breed" >
-                                        </label>
-                                    </div>
-
-                                    <div class="col-6 ">
-                                        <label class="form-label">Genero:
-                                            <input class="form-control" type="text"  id="gener" name="gener" >
-                                        </label>
-                                    </div>
-
-                                    <div class="col-6 ">
-                                        <label class="form-label">Nombre del dueño:
-                                            <input class="form-control" type="text"  id="petOwner" name="petOwner" >
-                                        </label>
-                                    </div>
-
-
-
-                                    <div class="col-6 ">
-                                        <label class="form-label">Favor comunicarse al #:
-                                            <input class="form-control" type="tel"  id="phonenumber" name="phonenumber" >
-                                        </label>
+                                    <div class="col-md-6">
+                                       
+                                            <input class="form-control" type="text" id="breed" name="breed" placeholder="Raza">
+                                       
                                     </div>
 
                                     <div class="col-md-6">
                                         
-                                            <input class="form-control"  type="text"  id="instagram" name="instagram" placeholder="Instagram" >
+                                            <input class="form-control" type="text"  id="gener" name="gener" placeholder="Género">
+                                        
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        
+                                            <input class="form-control" type="text"  id="petOwner" name="petOwner" placeholder="Nombre dueño">
+                                        
+                                    </div>
+
+
+
+                                    <div class="col-md-6">
+                                        
+                                            <input class="form-control" type="tel"  id="phonenumber" name="phonenumber" placeholder="Número de contacto">
+                                        
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        
+                                            <input class="form-control"  type="text" id="instagram" name="instagram" placeholder="Instagram" >
                                        
                                     </div>
 
-                                    <div class="col-6">
-                                        <label class="form-label">Correo:
-                                            <input class="form-control" type="email" id="email" name="email" >
-                                        </label>
+                                    <div class="col-md-6">
+                                      
+                                            <input class="form-control" type="email" id="email" name="email" placeholder="Correo electrónico">
+                                        
                                     </div>
 
 
 
 
-                                    <div class="col-6 ">
-                                        <label class="form-label">Se perdio en:
-                                            <input placeholder="Ciudad" class="form-control" type="text" id="city" name="city" >
-                                        </label>
+                                    <div class="col-md-6">
+                                        
+                                            <input  class="form-control" type="text" id="city" name="city" placeholder="Ciudad de extravío">
+                                       
                                     </div>
 
-                                    <div class="col-6">
-                                        <label class="form-label">Se perdio el:
-                                            <input class="form-control" type="text"  id="dateOfLost" name="dateOfLost">
-                                        </label>
+                                    <div class="col-md-6">
+                                        
+                                            <input class="form-control" type="text"  id="dateOfLost" name="dateOfLost" placeholder="Fecha extravío">
+                                        
                                     </div>
-                                    <div class="col-4">
+
+
+                                    <div class="col-12">
+                                        
+                                            <textarea class="form-control" cols="67"
+                                                rows="6" id="description"  name="description" placeholder="Descripción"></textarea>
+                                        
+                                    </div>
+                                    <div class="col-md-6">
                                         <label class="form-label" id="texto"> Ingrese la imagen:
                                             <input class="form-control" type="file" id="fichero"  >
                                             <input type="hidden" name="imageUrl" id="imgUrl" value="">
                                         </label>
 
-                                <div class="row col-12">
-                                    <label class="form-label">Descripción:
-                                        <textarea class="form-control" cols="40"
-                                            rows="6" id="description"  name="description"></textarea>
-                                    </label>
-                                </div>
+                              
 
                               
                                 </div>
                                 <div class="my-2">
-                                <button class="btn-enviar" type="submit" value="send" id="send">Enviar</button>
+                               
+                                <button class="btn text-light btn-primary" type="submit" value="send" id="send">Enviar</button>
                                 </div>
                             </form>
                         </div>
