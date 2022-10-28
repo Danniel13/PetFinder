@@ -109,3 +109,23 @@ aside{
     text-align: left;
     background-color:rgba(0, 0, 0, 0.2) ;
 }
+
+#form-submit{
+    padding: .375rem .75rem;
+    border-radius: .30rem;
+    background-color: #d4060648;
+    color: #fff;
+    transition: background-color .15s ease-in-out;
+    border-color: #b05c77a2;
+  }
+
+
+
+#form-submit:hover{
+    background-color: #de1c1c99;;
+  }
+  
+  #form-submit:active {
+    background-color: #de1c1c99;;
+  }
+  
