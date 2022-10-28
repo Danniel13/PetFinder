@@ -93,7 +93,7 @@ public class PetFindercontroller {
     @PostMapping("/reporter")
     public String reporterAction(@ModelAttribute Reporter reporter, RedirectAttributes flash) { // Model es la forma como se va a enviar desde backend al html
         reporterService.addReporter(reporter);
-        flash.addFlashAttribute("message", "Tu mascota ah sido reportada!");
+        flash.addFlashAttribute("message", "Tu mascota ha sido reportada!");
         return "redirect:/reporter";
     }
     
@@ -109,7 +109,7 @@ public class PetFindercontroller {
     @PostMapping("/pqrs") 
     public String pqrsAction(@ModelAttribute("pqrs") Pqrs pqrs, RedirectAttributes flash) { // Model es la forma como se va a enviar desde backend al html
         pqrsService.addPqrs(pqrs);
-        flash.addFlashAttribute("message", "PQR enviado. Gracias por tu tiempo!");
+        flash.addFlashAttribute("message", "PQR enviado. Gracias por su tiempo!");
         
         return "redirect:/pqrs";
     }
