@@ -111,3 +111,26 @@ justify-content: center;
   
    
 }
+#title1{
+  
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    font-size: 28px;
+    color: #39a5d7;
+    text-shadow: -1px 0 #414d68, 0 1px #414d68, 1px 0 #414d68, 0 -1px #414d68,
+      -2px 2px 0 #414d68, 2px 2px 0 #414d68, 1px 1px #414d68, 2px 2px #414d68,
+      3px 3px #414d68, 4px 4px #414d68;
+  }
+
+
+#title {
+  
+    font-family: Comic Sans MS;
+  
+    font-size: 42px;
+    color: #2f9acb;
+    text-shadow: -1px 0 #414d68, 0 1px #414d68, 1px 0 #414d68, 0 -1px #414d68,
+      -2px 2px 0 #414d68, 2px 2px 0 #414d68, 1px 1px #414d68, 2px 2px #414d68,
+      3px 3px #414d68, 4px 4px #414d68, 5px 5px #414d68, 6px 6px #414d68,
+      7px 7px #414d68, 8px 8px #414d68, 9px 9px #414d68;
+  }
